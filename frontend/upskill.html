@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -24,10 +25,45 @@
         <main class="upskill-content">
             <h2>What would you like to do in the platform?</h2>
             <div class="button-container">
-                <a href="#" class="action-btn upskill-btn">Upskill and apply for a job</a>
-                <a href="#" class="action-btn find-job-btn">Find Job Opportunities</a>
+                <a href="#" class="action-btn upskill-btn" id="upskillBtn">Upskill and apply for a job</a>
+                <a href="#" class="action-btn find-job-btn" id="findJobBtn">Find Job Opportunities</a>
+            </div>
+            <div class="options-container" style="display: none;">
+                <div class="option-wrapper">
+                    <button class="option-btn profession-btn">
+                        <i class="fas fa-chevron-down"></i>
+                        Profession
+                    </button>
+                    <select class="option-select profession-select" style="display: none;">
+                        <option value="">Select a profession</option>
+                        <!-- Options will be dynamically added here -->
+                        <option value="software-developer">Software Developer</option>
+                        <option value="data-scientist">Data Scientist</option>
+                        <option value="ux-designer">UX Designer</option>
+                        <option value="product-manager">Product Manager</option>
+                        <option value="digital-marketer">Digital Marketer</option>
+                        <option value="cybersecurity-analyst">Cybersecurity Analyst</option>
+                        <option value="cloud-architect">Cloud Architect</option>
+                        <option value="ai-engineer">AI Engineer</option>
+                        <option value="business-analyst">Business Analyst</option>
+                        <option value="devops-engineer">DevOps Engineer</option>
+                    </select>
+                </div>
+                <div class="option-wrapper">
+                    <button class="option-btn level-btn">
+                        <i class="fas fa-chevron-down"></i>
+                        Level
+                    </button>
+                    <select class="option-select level-select" style="display: none;">
+                        <option value="">Select a level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
             </div>
         </main>
     </div>
+    <script src="../assets/js/upskill.js"></script>
 </body>
 </html>
