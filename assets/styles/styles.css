@@ -121,111 +121,136 @@
         /* Upskill */
         
 
-.upskill-content {
-    text-align: center;
-    padding: 50px 0;
-}
+        .upskill-content {
+            text-align: center;
+            padding: 50px 0;
+        }
 
-.upskill-content h2 {
-    font-size: 24px;
-    color: #1E0E4B;
-    margin-bottom: 30px;
-}
+        .upskill-content h2 {
+            font-size: 24px;
+            color: #1E0E4B;
+            margin-bottom: 30px;
+        }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-.action-btn {
-    padding: 15px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
-}
+        .action-btn, .option-btn, .start-process-btn {
+            width: 100%;
+            max-width: 300px;
+        }
 
-.action-btn:hover {
-    transform: translateY(-3px);
-    background-color: transparent;
-    border: 2px solid;
-}
+        .action-btn {
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
 
-.upskill-btn {
-    background-color: #F5DB3C;
-    color: #1E0E4B;
-    border: 2px solid transparent;
-}
+        .action-btn:hover {
+            transform: translateY(-3px);
+            background-color: transparent;
+            border: 2px solid;
+        }
 
-.upskill-btn:hover {
-    border-color: #F5DB3C;
-    color: #F5DB3C;
-}
+        .upskill-btn {
+            background-color: #F5DB3C;
+            color: #1E0E4B;
+            border: 2px solid transparent;
+        }
 
-.find-job-btn {
-    background-color: #FF7F50;
-    color: #FFFFFF;
-    border: 2px solid transparent;
-}
+        .upskill-btn:hover {
+            border-color: #F5DB3C;
+            color: #F5DB3C;
+        }
 
-.find-job-btn:hover {
-    border-color: #FF7F50;
-    color: #FF7F50;
-}
+        .find-job-btn {
+            background-color: #FF7F50;
+            color: #FFFFFF;
+            border: 2px solid transparent;
+        }
 
-.options-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 20px;
-}
+        .find-job-btn:hover {
+            border-color: #FF7F50;
+            color: #FF7F50;
+        }
 
-.option-wrapper {
-    width: 100%;
-    max-width: 300px;
-}
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
 
-.option-btn {
-    width: 100%;
-    padding: 15px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    cursor: pointer;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
+        .option-wrapper {
+            width: 100%;
+            max-width: 300px;
+        }
 
-.option-btn i {
-    margin-right: 10px;
-    transition: transform 0.3s;
-}
+        .option-btn {
+            width: 100%;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
 
-.option-btn.active i {
-    transform: rotate(180deg);
-}
+        .option-btn i {
+            margin-right: 10px;
+            transition: transform 0.3s;
+        }
 
-.option-select {
-    width: 100%;
-    padding: 15px;
-    border-radius: 15px;
-    border: 2px solid var(--primary-color);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-size: 16px;
-    margin-top: 10px;
-    display: none;
-}
+        .option-btn.active i {
+            transform: rotate(180deg);
+        }
 
-.option-select.active {
-    display: block;
-}
+        .option-select {
+            width: 100%;
+            padding: 15px 30px;
+            border-radius: 15px;
+            border: 2px solid var(--primary-color);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-size: 16px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .option-select.active {
+            display: block;
+        }
+
+
+        .start-process-btn {
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .start-process-btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
