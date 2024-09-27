@@ -3,9 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Courses Page</title>
+    <link rel="stylesheet" href="../assets/styles/courses.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="container">
+        <header>
+            <div class="logo">Logo Here</div>
+            <nav>
+                <ul>
+                    <li>Membership</li>
+                    <li>Community</li>
+                    <li>Feature</li>
+                    <li>Help</li>
+                    <li>About</li>
+                </ul>
+            </nav>
+            <a href="#" class="login-btn">Login</a>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Learn with Expert Anytime Anywhere.</h1>
+                    <p>Our mission is to help people to find the best course online and learn with expert anytime, anywhere.</p>
+                    <div class="search-bar">
+                        <input type="text" placeholder="What do you want to learn...">
+                        <select>
+                            <option value="">Category</option>
+                        </select>
+                        <button class="btn btn-primary">SEARCH</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="/assets/images/Hero.jpg" alt="Student learning online">
+                </div>
+            </section>
+
+            <section class="categories">
+                <h2>Browse Course with Top Categories</h2>
+                <div class="category-slider">
+                    <button class="slider-arrow left"><i class="fas fa-chevron-left"></i></button>
+                    <div class="category-items">
+                        <div class="category-item">
+                            <i class="fas fa-camera"></i>
+                            <h3>Photography</h3>
+                            <p>587 Courses</p>
+                        </div>
+                        <div class="category-item active">
+                            <i class="fas fa-code"></i>
+                            <h3>Development</h3>
+                            <p>17k Courses</p>
+                        </div>
+                        <div class="category-item">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <h3>Design</h3>
+                            <p>23k Courses</p>
+                        </div>
+                        <div class="category-item">
+                            <i class="fas fa-music"></i>
+                            <h3>Music</h3>
+                            <p>297 Courses</p>
+                        </div>
+                        <div class="category-item">
+                            <i class="fas fa-bullhorn"></i>
+                            <h3>Marketing</h3>
+                            <p>2k Courses</p>
+                        </div>
+                    </div>
+                    <button class="slider-arrow right"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <section class="popular-courses">
+                <h2>Our Popular Courses</h2>
+                <div class="course-filters">
+                    <button class="active">All</button>
+                    <button>Design</button>
+                    <button>Development</button>
+                    <button>Business</button>
+                    <button>IT & Software</button>
+                </div>
+                <div class="course-grid">
+                    <!-- Repeat this structure for each course -->
+                    <div class="course-card">
+                        <img src="/assets/images/CSS.jpg" alt="Course Image">
+                        <div class="course-content">
+                            <h3>Advanced CSS and Sass: Flexbox, Grid, Animations and More!</h3>
+                            <div class="instructor">
+                                <img src="instructor-1.jpg" alt="Instructor">
+                                <span>Brandon Dias</span>
+                                <span class="price">$12 <span class="original-price">$95</span></span>
+                            </div>
+                            <div class="course-info">
+                                <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                                <span class="students"><i class="fas fa-user"></i> 24,517</span>
+                                <span class="lessons"><i class="fas fa-book"></i> 35 lesson</span>
+                                <span class="duration"><i class="fas fa-clock"></i> 3 Hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="/assets/images/CSS.jpg" alt="Course Image">
+                        <div class="course-content">
+                            <h3>Advanced CSS and Sass: Flexbox, Grid, Animations and More!</h3>
+                            <div class="instructor">
+                                <img src="instructor-1.jpg" alt="Instructor">
+                                <span>Brandon Dias</span>
+                                <span class="price">$12 <span class="original-price">$95</span></span>
+                            </div>
+                            <div class="course-info">
+                                <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                                <span class="students"><i class="fas fa-user"></i> 24,517</span>
+                                <span class="lessons"><i class="fas fa-book"></i> 35 lesson</span>
+                                <span class="duration"><i class="fas fa-clock"></i> 3 Hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="/assets/images/CSS.jpg" alt="Course Image">
+                        <div class="course-content">
+                            <h3>Advanced CSS and Sass: Flexbox, Grid, Animations and More!</h3>
+                            <div class="instructor">
+                                <img src="instructor-1.jpg" alt="Instructor">
+                                <span>Brandon Dias</span>
+                                <span class="price">$12 <span class="original-price">$95</span></span>
+                            </div>
+                            <div class="course-info">
+                                <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                                <span class="students"><i class="fas fa-user"></i> 24,517</span>
+                                <span class="lessons"><i class="fas fa-book"></i> 35 lesson</span>
+                                <span class="duration"><i class="fas fa-clock"></i> 3 Hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="/assets/images/CSS.jpg" alt="Course Image">
+                        <div class="course-content">
+                            <h3>Advanced CSS and Sass: Flexbox, Grid, Animations and More!</h3>
+                            <div class="instructor">
+                                <img src="instructor-1.jpg" alt="Instructor">
+                                <span>Brandon Dias</span>
+                                <span class="price">$12 <span class="original-price">$95</span></span>
+                            </div>
+                            <div class="course-info">
+                                <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                                <span class="students"><i class="fas fa-user"></i> 24,517</span>
+                                <span class="lessons"><i class="fas fa-book"></i> 35 lesson</span>
+                                <span class="duration"><i class="fas fa-clock"></i> 3 Hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="/assets/images/CSS.jpg" alt="Course Image">
+                        <div class="course-content">
+                            <h3>Advanced CSS and Sass: Flexbox, Grid, Animations and More!</h3>
+                            <div class="instructor">
+                                <img src="instructor-1.jpg" alt="Instructor">
+                                <span>Brandon Dias</span>
+                                <span class="price">$12 <span class="original-price">$95</span></span>
+                            </div>
+                            <div class="course-info">
+                                <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                                <span class="students"><i class="fas fa-user"></i> 24,517</span>
+                                <span class="lessons"><i class="fas fa-book"></i> 35 lesson</span>
+                                <span class="duration"><i class="fas fa-clock"></i> 3 Hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="/assets/images/CSS.jpg" alt="Course Image">
+                        <div class="course-content">
+                            <h3>Advanced CSS and Sass: Flexbox, Grid, Animations and More!</h3>
+                            <div class="instructor">
+                                <img src="instructor-1.jpg" alt="Instructor">
+                                <span>Brandon Dias</span>
+                                <span class="price">$12 <span class="original-price">$95</span></span>
+                            </div>
+                            <div class="course-info">
+                                <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                                <span class="students"><i class="fas fa-user"></i> 24,517</span>
+                                <span class="lessons"><i class="fas fa-book"></i> 35 lesson</span>
+                                <span class="duration"><i class="fas fa-clock"></i> 3 Hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="/assets/images/CSS.jpg" alt="Course Image">
+                        <div class="course-content">
+                            <h3>Advanced CSS and Sass: Flexbox, Grid, Animations and More!</h3>
+                            <div class="instructor">
+                                <img src="instructor-1.jpg" alt="Instructor">
+                                <span>Brandon Dias</span>
+                                <span class="price">$12 <span class="original-price">$95</span></span>
+                            </div>
+                            <div class="course-info">
+                                <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                                <span class="students"><i class="fas fa-user"></i> 24,517</span>
+                                <span class="lessons"><i class="fas fa-book"></i> 35 lesson</span>
+                                <span class="duration"><i class="fas fa-clock"></i> 3 Hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="/assets/images/CSS.jpg" alt="Course Image">
+                        <div class="course-content">
+                            <h3>Advanced CSS and Sass: Flexbox, Grid, Animations and More!</h3>
+                            <div class="instructor">
+                                <img src="instructor-1.jpg" alt="Instructor">
+                                <span>Brandon Dias</span>
+                                <span class="price">$12 <span class="original-price">$95</span></span>
+                            </div>
+                            <div class="course-info">
+                                <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                                <span class="students"><i class="fas fa-user"></i> 24,517</span>
+                                <span class="lessons"><i class="fas fa-book"></i> 35 lesson</span>
+                                <span class="duration"><i class="fas fa-clock"></i> 3 Hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="/assets/images/CSS.jpg" alt="Course Image">
+                        <div class="course-content">
+                            <h3>Advanced CSS and Sass: Flexbox, Grid, Animations and More!</h3>
+                            <div class="instructor">
+                                <img src="instructor-1.jpg" alt="Instructor">
+                                <span>Brandon Dias</span>
+                                <span class="price">$12 <span class="original-price">$95</span></span>
+                            </div>
+                            <div class="course-info">
+                                <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                                <span class="students"><i class="fas fa-user"></i> 24,517</span>
+                                <span class="lessons"><i class="fas fa-book"></i> 35 lesson</span>
+                                <span class="duration"><i class="fas fa-clock"></i> 3 Hours</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for other courses -->
+                </div>
+                <div class="pagination">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <!-- Add footer content here -->
+    </footer>
 </body>
 </html>
