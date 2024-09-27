@@ -1,0 +1,102 @@
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 24px;
+        }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        .login-btn {
+            background-color: #FFD700;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #000;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .left-content {
+            flex: 1;
+        }
+        .right-content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1E0E4B;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .email-form {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        .email-form input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px 0 0 20px;
+        }
+        .email-form button {
+            background-color: #FF7F50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+        }
+        .connect-people {
+            display: flex;
+            align-items: center;
+        }
+        .connect-people img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: -10px;
+        }
+        .connect-people span {
+            margin-left: 20px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
