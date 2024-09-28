@@ -43,10 +43,10 @@
                     <i class="far fa-envelope"></i>
                     <h3>Cover Letter Revamp</h3>
                     <p>Create compelling cover letters tailored to each job application. Our AI assists in highlighting your strengths and experiences.</p>
-                    <label for="cover-letter-upload" class="power-btn">
+                    
+                    <button class="power-btn">
                         <i class="fas fa-cloud-arrow-up" style="font-size: 25px; font-weight: bold;"></i>
-                        <input type="file" id="cover-letter-upload" accept=".pdf,.doc,.docx" style="display: none;">
-                    </label>
+                    </button>
                 </div>
                 <div class="card">
                     <i class="far fa-user"></i>
@@ -67,5 +67,24 @@
             </div>
         </section>
     </div>
+    <div id="upload-modal" class="modal">
+        <div class="modal-content">
+            <h2>Generating your Materials</h2>
+            <p>Our AI is getting your revamped CV ready for you... This could take a couple minutes</p>
+            <img src="../assets/images/analysing.gif" alt="Analyzing" class="analyzing-gif">
+            <div class="progress-container">
+                <h3>Step 1: Transferring files to server</h3>
+                <div class="progress-bar" id="transfer-progress"></div>
+                <p class="progress-status" id="transfer-status">Uploading your files to our server, this varies based on your internet speed and could take a minute.</p>
+            </div>
+            <div class="progress-container">
+                <h3>Step 2: Processing your files with AI</h3>
+                <div class="progress-bar" id="processing-progress"></div>
+                <p class="progress-status" id="processing-status">Extracting the data from your files and generating materials using our AI</p>
+            </div>
+            <p class="note">Note: This could take a minute depending on the size of your uploads.<br>You can close this tab if you want, your materials will continue to process and we will email you when your materials are ready.</p>
+        </div>
+    </div>
+    <script src="../assets/js/upload.js"></script>
 </body>
 </html>
