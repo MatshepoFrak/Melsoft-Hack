@@ -7,6 +7,7 @@ import speech_recognition as sr
 import pyttsx3
 import cv2
 import face_recognition
+from huggingface_models.speech_synchronizer import SpeechSynchronizer
 
 # Speech recognition setup
 recognizer = sr.Recognizer()
@@ -48,6 +49,8 @@ timing_model = Sequential([
 
 timing_model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
+speech_sync = SpeechSynchronizer()
+
 def listen():
     with sr.Microphone() as source:
         print("Listening...")
@@ -62,8 +65,7 @@ def listen():
 
 def speak(text):
     print(f"Avatar: {text}")
-    engine.say(text)
-    engine.runAndWait()
+    speech_sync.synchronize_speech(text, engine.say)
 
 def process_input(text):
     # Use the NLP model to process the input
