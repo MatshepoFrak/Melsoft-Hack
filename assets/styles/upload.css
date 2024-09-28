@@ -252,9 +252,11 @@
 .medium-card {
     flex-basis: calc(50% - 20px);
     height: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
-#pdf-preview {
+#pdf-preview, #revamped-pdf-preview {
     height: 100%;
     overflow-y: auto;
     border: 1px solid #ccc;
@@ -262,9 +264,19 @@
     padding: 10px;
 }
 
-#pdf-preview embed {
+#pdf-preview embed, #revamped-pdf-preview embed {
     width: 100%;
     height: 100%;
+}
+
+.medium-card > div:not(.power-btn) {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.medium-card > div:not(.power-btn) > embed {
+    flex-grow: 1;
 }
 
 #revamp-btn {
@@ -276,4 +288,26 @@
 
 #revamp-btn:hover {
     color: var(--primary-color);
+}
+
+.style-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.style-btn {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.style-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
 }

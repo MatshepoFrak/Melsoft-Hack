@@ -1,23 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
     const pdfPreview = document.getElementById('pdf-preview');
+    const revampedPdfPreview = document.getElementById('revamped-pdf-preview');
     const pdfUpload = document.getElementById('pdf-upload');
     const uploadedPDF = sessionStorage.getItem('uploadedPDF');
 
-    function displayPDF(pdfSource) {
-        pdfPreview.innerHTML = `<embed src="${pdfSource}" type="application/pdf" width="100%" height="100%">`;
+    function displayPDF(pdfSource, container) {
+        container.innerHTML = `<embed src="${pdfSource}" type="application/pdf" width="100%" height="100%">`;
     }
 
+    // Display the uploaded PDF in the left card
     if (uploadedPDF) {
-        displayPDF(uploadedPDF);
+        displayPDF(uploadedPDF, pdfPreview);
         sessionStorage.removeItem('uploadedPDF');
     }
+
+    // Display Matshepo_CV.pdf in the right card
+    displayPDF('../assets/pdf/Matshepo_CV.pdf', revampedPdfPreview);
 
     pdfUpload.addEventListener('change', function(event) {
         const file = event.target.files[0];
         if (file && file.type === 'application/pdf') {
             const reader = new FileReader();
             reader.onload = function(e) {
-                displayPDF(e.target.result);
+                displayPDF(e.target.result, pdfPreview);
             };
             reader.readAsDataURL(file);
         } else {
