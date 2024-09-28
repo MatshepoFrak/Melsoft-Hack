@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design for Web Developers: Build Beautiful Websites!</title>
+    <link rel="stylesheet" href="../assets/styles/lecture.css">
+    <link rel="stylesheet" href="../assets/styles/quiz.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">EMPLOY HUB</div>
+                <nav>
+                    <ul>
+                        <li>Membership</li>
+                        <li>Community</li>
+                        <li>Feature</li>
+                        <li>Help</li>
+                        <li>About</li>
+                    </ul>
+                </nav>
+                <a href="#" class="login-btn">Login</a>
+        </header>
+    
+        <main class="course-container">
+            <div class="course-content">
+                <div class="video-container">
+                    <iframe id="lecture-video" 
+                            width="100%" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/zJSY8tbf_ys" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="course-info">
+                    <!-- Course info content -->
+                    <h1>Web Design for Web Developers: Build Beautiful Websites!</h1>
+                    <p>Learn web design in 1 hour with 25+ simple-to-use rules and guidelines — tons of amazing web design resources included!</p>
+                    <div class="course-meta">
+                        <span class="rating">4.5 ★</span>
+                        <span class="students">760,739 students</span>
+                        <span class="duration">3 hours total</span>
+                    </div>
+                    <p class="last-updated">Last updated April 2024</p>
+                    <p class="languages">English <span class="auto-generated">English [Auto], Bulgarian [Auto], 19 more</span></p>
+                </div>
+            </div>
+            <button id="toggle-content" class="toggle-content-btn">Course content</button>
+        </main>
+    
+        <aside id="course-sidebar" class="course-sidebar">
+            <div class="sidebar-header">
+                <h2>Course content</h2>
+                <button id="close-sidebar" class="close-btn">&times;</button>
+            </div>
+            <div class="course-sections">
+                <div class="section">
+                    <h3>Section 1: Course Introduction <span>0/3 | 3min</span></h3>
+                    <ul>
+                        <li><input type="checkbox"><span class="lesson-title">1. Welcome To This Course</span><span class="lesson-duration">3min</span></li>
+                        <li><input type="checkbox"><span class="lesson-title">2. READ BEFORE YOU START!</span><span class="lesson-duration">1min</span></li>
+                        <li><input type="checkbox"><span class="lesson-title">3. E-Book Resources 2.0</span><span class="lesson-duration">1min</span></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Section 2: The 25+ Guidelines Of Amazing Web Design <span>0/13 | 45min</span></h3>
+                    <ul>
+                        <!-- Add lessons here -->
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Section 3: Course Summary <span>0/3 | 1hr 42min</span></h3>
+                    <ul>
+                        <!-- Add lessons here -->
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Section 4: Conclusion <span>0/2 | 4min</span></h3>
+                    <ul>
+                        <!-- Add lessons here -->
+                    </ul>
+                </div>
+            </div>
+            <div class="quiz-section">
+                <button id="take-quiz-btn" class="take-quiz-btn">Take Quiz</button>
+            </div>
+        </aside>
+
+        <div id="quiz-modal" class="quiz-modal">
+            <div class="quiz-content">
+                <h2>Course Quiz</h2>
+                <div id="quiz-questions"></div>
+                <div id="quiz-results" style="display: none;">
+                    <h3>Quiz Results</h3>
+                    <p>Your score: <span id="quiz-score"></span></p>
+                    <div id="question-feedback"></div>
+                </div>
+                <button id="submit-quiz" class="submit-quiz-btn">Submit Quiz</button>
+                <button id="close-quiz" class="close-quiz-btn">&times;</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/lecture.js"></script>
+    <script src="../assets/js/quiz.js"></script>
+</body>
+</html>
