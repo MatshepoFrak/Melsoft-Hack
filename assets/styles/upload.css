@@ -255,11 +255,16 @@
 }
 
 #pdf-preview {
-    height: 250px;
+    height: 100%;
     overflow-y: auto;
     border: 1px solid #ccc;
     margin-bottom: 15px;
     padding: 10px;
+}
+
+#pdf-preview embed {
+    width: 100%;
+    height: 100%;
 }
 
 #revamp-btn {
