@@ -4,6 +4,7 @@
             --text-color: #1E0E4B;
             --text-color-2: white;
             --background-color: #F0EEF9;
+            --icons-color: #BF88FF;
 
         }
         
@@ -46,7 +47,7 @@
             padding: 10px 20px;
             border-radius: 20px;
             text-decoration: none;
-            color: var(--text-color);
+            color: var(--text-color-2);
         }
         .main-content {
             display: flex;
@@ -151,7 +152,7 @@
         }
 
         .action-btn {
-            padding: 15px 30px;
+            padding: 10px 20px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
@@ -167,7 +168,7 @@
 
         .upskill-btn {
             background-color: var(--primary-color);
-            color: var(--text-color);
+            color: var(--text-color-2);
             border: 2px solid transparent;
         }
 
@@ -249,7 +250,7 @@
             text-decoration: none;
             font-weight: 600;
             font-size: 16px;
-            background-color: var(--secondary-color);
+            background-color: var(--primary-color);
             color: var(--background-color);
             border: 2px solid var(--background-color);
             cursor: pointer;
