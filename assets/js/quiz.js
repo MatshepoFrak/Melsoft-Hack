@@ -60,49 +60,49 @@ document.addEventListener('DOMContentLoaded', function() {
     const quizResults = document.getElementById('quiz-results');
     const quizScore = document.getElementById('quiz-score');
     const questionFeedback = document.getElementById('question-feedback');
+    const sidebarQuizScore = document.getElementById('sidebar-quiz-score');
+    const quizScoreDisplay = document.getElementById('quiz-score-display');
+
+    let currentScore = 0;
 
     takeQuizBtn.addEventListener('click', openQuiz);
     closeQuizBtn.addEventListener('click', closeQuiz);
     submitQuizBtn.addEventListener('click', submitQuiz);
 
+    function openQuiz() {
+        quizModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        generateQuiz();
+        quizResults.style.display = 'none';
+        submitQuizBtn.style.display = 'block';
+    }
 
-function openQuiz() {
-    quizModal.style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Prevent body scrolling when modal is open
-    generateQuiz();
-}
+    function closeQuiz() {
+        quizModal.style.display = 'none';
+        document.body.style.overflow = '';
+        quizQuestionsContainer.innerHTML = '';
+    }
 
-function closeQuiz() {
-    quizModal.style.display = 'none';
-    document.body.style.overflow = ''; // Restore body scrolling
-    quizQuestionsContainer.innerHTML = '';
-    quizResults.style.display = 'none';
-    submitQuizBtn.style.display = 'block';
-}
-
-function generateQuiz() {
-    quizQuestionsContainer.innerHTML = '';
-    quizQuestions.forEach((q, index) => {
-        const questionDiv = document.createElement('div');
-        questionDiv.classList.add('quiz-question');
-        questionDiv.innerHTML = `
-            <p><strong>Question ${index + 1}:</strong> ${q.question}</p>
-            <div class="quiz-options">
-                ${q.options.map((option, i) => `
-                    <label>
-                        <input type="radio" name="q${index}" value="${i}">
-                        ${option}
-                    </label>
-                `).join('')}
-            </div>
-        `;
-        quizQuestionsContainer.appendChild(questionDiv);
-    });
-    
-    // Scroll to the top of the quiz content
-    quizModal.scrollTop = 0;
-}
-
+    function generateQuiz() {
+        quizQuestionsContainer.innerHTML = '';
+        quizQuestions.forEach((q, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.classList.add('quiz-question');
+            questionDiv.innerHTML = `
+                <p><strong>Question ${index + 1}:</strong> ${q.question}</p>
+                <div class="quiz-options">
+                    ${q.options.map((option, i) => `
+                        <label>
+                            <input type="radio" name="q${index}" value="${i}">
+                            ${option}
+                        </label>
+                    `).join('')}
+                </div>
+            `;
+            quizQuestionsContainer.appendChild(questionDiv);
+        });
+        quizModal.scrollTop = 0;
+    }
 
     function submitQuiz() {
         let score = 0;
@@ -123,9 +123,17 @@ function generateQuiz() {
             }
         });
 
+        currentScore = score;
         quizScore.textContent = `${score} out of ${quizQuestions.length}`;
         questionFeedback.innerHTML = feedback;
         quizResults.style.display = 'block';
         submitQuizBtn.style.display = 'none';
+
+        // Update sidebar score
+        sidebarQuizScore.textContent = `${score} out of ${quizQuestions.length}`;
+        quizScoreDisplay.style.display = 'block';
+
+        // Change "Take Quiz" button text to "Retake Quiz"
+        takeQuizBtn.textContent = 'Retake Quiz';
     }
 });
