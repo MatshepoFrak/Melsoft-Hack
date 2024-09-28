@@ -39,8 +39,18 @@ function simulateFileUpload(file) {
                 processingStatus.textContent = 'Processing complete!';
                 setTimeout(() => {
                     document.getElementById('upload-modal').style.display = 'none';
+                    storeAndRedirect(file);
                 }, 2000);
             }
         }, 1000);
+    }
+
+    function storeAndRedirect(file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            sessionStorage.setItem('uploadedPDF', e.target.result);
+            window.location.href = 'revamped.html';
+        };
+        reader.readAsDataURL(file);
     }
 }

@@ -1,3 +1,13 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const pdfPreview = document.getElementById('pdf-preview');
+    const uploadedPDF = sessionStorage.getItem('uploadedPDF');
+
+    if (uploadedPDF) {
+        pdfPreview.innerHTML = `<embed src="${uploadedPDF}" type="application/pdf" width="40%" height="40%">`;
+        sessionStorage.removeItem('uploadedPDF');
+    }
+});
+
 document.getElementById('pdf-upload').addEventListener('change', function(event) {
     const file = event.target.files[0];
     if (file && file.type === 'application/pdf') {
@@ -13,8 +23,6 @@ document.getElementById('pdf-upload').addEventListener('change', function(event)
 });
 
 document.getElementById('revamp-btn').addEventListener('click', function() {
-    // Here you would typically send the PDF to your backend for processing
-    // For now, we'll just simulate the revamp process
     const revampedContent = document.querySelector('.card.medium-card:nth-child(2) p');
     revampedContent.textContent = 'Processing your PDF... This may take a few moments.';
     
