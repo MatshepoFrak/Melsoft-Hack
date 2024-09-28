@@ -152,7 +152,7 @@ nav ul li a {
 }
 
 .category-item.active {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: #fff;
 }
 
@@ -293,5 +293,5 @@ nav ul li a {
 }
 
 .pagination span.active {
-    background-color: #007bff;
+    background-color: var(--primary-color);
 }
